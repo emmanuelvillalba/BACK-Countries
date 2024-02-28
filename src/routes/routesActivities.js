@@ -38,15 +38,12 @@ routerActivities.post("/", async (req, res) => {
   const countriesId = countries
     .split(",")
     .map((country) => country.toUpperCase());
-  
-    const difficultyF = Math.floor(difficulty)
-    const durationF = Math.floor(duration)
 
   try {
     const activitiesCountries = await createActivity({
       name,
-      difficultyF,
-      durationF,
+      difficulty,
+      duration,
       season,
       countriesId,
     });
