@@ -34,7 +34,7 @@ routerActivities.post("/", async (req, res) => {
   if (!name || !difficulty || !duration || !season || countries === "" ) {
     return res.status(400).json({ error: "Missing data" });
   }
-
+console.log("ESTOS SON LOS COUNTRIES QUE LLEGAN POR BODY",countries);
   const countriesId = countries
     .split(",")
     .map((country) => country.toUpperCase());
