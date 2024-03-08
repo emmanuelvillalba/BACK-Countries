@@ -31,7 +31,6 @@ routerActivities.get("/", async (req, res) => {
 routerActivities.post("/", async (req, res) => {
   let { name, difficulty, duration, season, countries } = req.body;
   
-  console.log("ESTOS SON LOS COUNTRIES QUE LLEGAN POR BODY",countries);
   if (!name || !difficulty || !duration || !season || countries == "" ) {
     return res.status(400).json({ error: "Missing data" });
   }
