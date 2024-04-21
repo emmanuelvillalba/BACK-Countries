@@ -11,8 +11,8 @@ async function startServer() {
     await conn.sync({ force: false });
     console.log("All models were synchronized successfully");
     await upDateDB();
-    await server.listen(PORT, () => {
-      console.log(`Server listening on port ${PORT}`);
+    await server.listen(PORT_SERVER, () => {
+      console.log(`Server listening on port ${PORT_SERVER}`);
     });
   } catch (error) {
     console.error("Unable to connect:", error.message);
